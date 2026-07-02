@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bymcy1ovcvgvd"]
+
+[ext_resource type="Script" uid="uid://bqr31lwmiofpx" path="res://Scenes/interfaz.gd" id="1_oi3ue"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oi3ue"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.9764706, 0.8862745, 0.6862745, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvs2m"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.9529412, 0.54509807, 0.65882355, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+
+[node name="Control" type="Control" unique_id=1977789844]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_oi3ue")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1170164678]
+layer = 2
+
+[node name="PanelContainer" type="Panel" parent="CanvasLayer" unique_id=1745753576]
+z_index = 15
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 546.0
+offset_bottom = 78.0
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer" unique_id=298931241]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 80.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.9764706, 0.8862745, 0.6862745, 1)
+text = "Cordura"
+
+[node name="Label2" type="Label" parent="CanvasLayer/PanelContainer" unique_id=207330504]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 37.0
+offset_right = 92.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.9529412, 0.54509807, 0.65882355, 1)
+text = "Calamidad"
+
+[node name="Cordura" type="ProgressBar" parent="CanvasLayer/PanelContainer" unique_id=152698681]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 12.0
+offset_right = 525.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.19215687, 0.19607843, 0.26666668, 1)
+theme_override_colors/font_outline_color = Color(0.47058824, 0, 0.105882354, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/fill = SubResource("StyleBoxFlat_oi3ue")
+step = 1.0
+value = 50.0
+
+[node name="Calamidad" type="ProgressBar" parent="CanvasLayer/PanelContainer" unique_id=494934442]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 40.0
+offset_right = 524.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0.19215687, 0.19607843, 0.26666668, 1)
+theme_override_colors/font_outline_color = Color(0.6627451, 0.6901961, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/fill = SubResource("StyleBoxFlat_xvs2m")
+step = 1.0
+value = 50.0

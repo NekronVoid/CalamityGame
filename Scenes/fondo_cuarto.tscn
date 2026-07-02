@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://edakvbc1kg2e"]
+
+[ext_resource type="Script" uid="uid://ca71b5dbtpf8f" path="res://Scenes/fondo_cuarto.gd" id="1_hsmis"]
+[ext_resource type="Texture2D" uid="uid://brmkaovslu3qf" path="res://Assets/habitacion-calamity.png" id="1_p0qwg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0qwg"]
+atlas = ExtResource("1_p0qwg")
+region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsmis"]
+atlas = ExtResource("1_p0qwg")
+region = Rect2(320, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dk3d1"]
+atlas = ExtResource("1_p0qwg")
+region = Rect2(640, 0, 320, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_p0qwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsmis")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_dk3d1")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="FondoCuarto" type="Control" unique_id=1098944249]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -195.0
+offset_right = -12.0
+offset_bottom = -195.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hsmis")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=707434561]
+z_index = 1
+texture_filter = 1
+position = Vector2(585.78577, 520.56244)
+scale = Vector2(3.652142, 3.6521425)
+sprite_frames = SubResource("SpriteFrames_xrivr")
+autoplay = "default"
+frame_progress = 0.9420696

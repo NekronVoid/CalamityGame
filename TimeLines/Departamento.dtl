@@ -1,0 +1,14 @@
+[background arg="#000000ff" fade="0.0"]
+audio "res://Assets/Digital alarm clock sound.mp3"
+[wait time="2.0"]
+[background scene="res://Scenes/fondo_cuarto.tscn" arg="#000000ff" fade="1.5" wait="true"]
+El despertador suena como un taladro dentro de tu cráneo. Lunes otra vez.
+Abres los ojos y el techo de tu cuarto parece estar un centímetro más abajo que ayer. Tienes esa maldita exposición en la universidad a las 8\:00 AM. El maestro no te va a dejar pasar si llegas un minuto tarde.
+Pero las sábanas pesan una tonelada... y el celular está ahí, en la mesita de noche, brillando con una notificación de un video nuevo. Unos minutos más no le hacen daño a nadie, ¿verdad?
+- Salir temprano
+	set {Calamidad} += 2.0
+- Quedarte viendo videos
+	La tentación gana. El tiempo vuela mientras consumes contenido basura en redes. El estrés aumenta inmediatamente (+15% Calamidad).
+	set {Calamidad} += 15.0
+if {Calamidad} < 30.0:
+	Sientes una punzada fría en la nuca. El día aún no empieza, pero el aire ya se siente pesado.
